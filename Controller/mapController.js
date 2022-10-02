@@ -10,6 +10,7 @@ module.exports.getMerkleProof = async (req, res) => {
     let leaves = Address.map(addr => keccak256(addr))
     let merkleTree = new MerkleTree(leaves, keccak256, {sortPairs: true})
     const rootHash = merkleTree.getHexRoot()
+   // console.log(rootHash)
     let prove = checkAddress // The input
     let hashedAddress = keccak256(prove)
     let proof = merkleTree.getHexProof(hashedAddress)
