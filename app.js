@@ -12,5 +12,5 @@ app.use(function(req, res, next) {
     next();
   });
 app.use('/api', mapRouter);
-app.get("/", (req, res) => { res.send("Welcome to LOL API ... ('This is a root Path')") })
+app.get("/", (req, res) => { res.send("Welcome to LOL API ... ('This is a root Path') FINAL") })
 module.exports = app
