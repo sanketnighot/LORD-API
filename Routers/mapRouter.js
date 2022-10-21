@@ -2,6 +2,6 @@ const router = require('express').Router();
 const {getMerkleProof} = require('../Controller/mapController');
 
 
-router.route('/getMerkleProof').get(getMerkleProof);
+router.route('/getMerkleProof').post(getMerkleProof);
 
 module.exports = router;
